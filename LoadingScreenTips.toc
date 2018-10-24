@@ -1,0 +1,7 @@
+## Interface: 80000
+## Title: LoadingScreenTips
+## Version: v8.0.1
+## Notes: Prints random loading screen tips
+## SavedVariables: LoadingScreenTips
+
+LoadingScreenTips.lua
