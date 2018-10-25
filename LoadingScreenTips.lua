@@ -1,4 +1,8 @@
 
+if LoadingScreenTips == nil then
+    LoadingScreenTips = true;
+end
+
 local loadingScreenTipsDB = 
 {   "Nearby questgivers that are awaiting your return are shown as a question mark on your mini-map.",
     "Your spell casting can be cancelled by moving, jumping or hitting the escape key.",
@@ -121,7 +125,13 @@ local function LoadingScreenTipsChatCommand(msg, editbox)
         flag = flag:lower()
     end
 
-    print(RandomLoadingScreenTips());
+    if LoadingScreenTips then
+        print('Loading Screen Tips has been disabled');
+    else 
+        print('Loading Screen Tips has been enabled');
+    end
+
+    LoadingScreenTips = not LoadingScreenTips;
 
 end
 
@@ -133,24 +143,24 @@ local frame=CreateFrame("Frame", nil, UIParent);
 frame:RegisterEvent("CHAT_MSG_GUILD");
 frame:RegisterEvent("CHAT_MSG_PARTY");
 frame:RegisterEvent("CHAT_MSG_RAID");
-frame:RegisterEvent("CHAT_MSG_BATTLEGROUND");
+-- frame:RegisterEvent("CHAT_MSG_BATTLEGROUND");
 
 frame:SetScript("OnEvent",function(self,event,arg1)
 
-    if event=="CHAT_MSG_GUILD" and arg1 == "!tips" then
+    if event=="CHAT_MSG_GUILD" and arg1 == "!tips" and LoadingScreenTips then
         SendChatMessage(RandomLoadingScreenTips(),"GUILD");
     end
 
-    if event=="CHAT_MSG_PARTY" and arg1 == "!tips" then
+    if event=="CHAT_MSG_PARTY" and arg1 == "!tips" and LoadingScreenTips then
         SendChatMessage(RandomLoadingScreenTips(),"PARTY");
     end
 
-    if event=="CHAT_MSG_RAID" and arg1 == "!tips" then
+    if event=="CHAT_MSG_RAID" and arg1 == "!tips" and LoadingScreenTips then
         SendChatMessage(RandomLoadingScreenTips(),"RAID");
     end
 
-    if event=="CHAT_MSG_BATTLEGROUND" and arg1 == "!tips" then
-        SendChatMessage(RandomLoadingScreenTips(),"BATTLEGROUND");
-    end
+    -- if event=="CHAT_MSG_BATTLEGROUND" and arg1 == "!tips" then
+    --     SendChatMessage(RandomLoadingScreenTips(),"BATTLEGROUND");
+    -- end
 
 end);
