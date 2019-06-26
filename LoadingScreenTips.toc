@@ -1,6 +1,6 @@
-## Interface: 81000
+## Interface: 80200
 ## Title: LoadingScreenTips
-## Version: v8.1.0
+## Version: v8.2.0
 ## Notes: Prints random loading screen tips
 ## SavedVariables: LoadingScreenTips
 
