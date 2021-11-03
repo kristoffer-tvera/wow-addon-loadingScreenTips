@@ -1,6 +1,6 @@
-## Interface: 90100
+## Interface: 90105
 ## Title: LoadingScreenTips
-## Version: v9.1.0
+## Version: v9.1.5
 ## Notes: Prints random loading screen tips
 ## SavedVariables: LoadingScreenTips
 
