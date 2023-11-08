@@ -1,4 +1,4 @@
-## Interface: 100107
+## Interface: 100200
 ## Title: LoadingScreenTips
 ## Version: v10.1.7
 ## Notes: Prints random loading screen tips
