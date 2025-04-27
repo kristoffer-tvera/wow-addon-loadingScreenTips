@@ -1,7 +1,19 @@
-## Interface: 110100
-## Version: v11.1.0
+## Interface: 110105
+## Version: v11.1.5
 ## Title: LoadingScreenTips
 ## Notes: Prints random loading screen tips
 ## SavedVariables: LoadingScreenTips
+
+## Category-enUS: Other
+## Category-deDE: Anderes
+## Category-esES: Otros
+## Category-esMX: Otros
+## Category-frFR: Autre
+## Category-itIT: Altro
+## Category-koKR: 기타
+## Category-ptBR: Outro
+## Category-ruRU: Другое
+## Category-zhCN: 其它
+## Category-zhTW: 其他
 
 LoadingScreenTips.lua
